@@ -78,9 +78,16 @@ popup.addEventListener("click", (e) => {
   }
 });
 
-document.addEventListener("keypress",(e)=>{
-    if (e.code==="Space") {
+document.addEventListener("keydown",(e)=>{
+    if (e.code==="ArrowRight") {
      let showSlide = document.querySelector(".showSlide")
      nextElemSib(showSlide);
     }
  })
+
+ document.addEventListener("keydown",(e)=>{
+  if (e.code==="ArrowLeft") {
+   let showSlide = document.querySelector(".showSlide")
+   prevElemSib(showSlide);
+  }
+})
